@@ -63,9 +63,13 @@ handleRemoveOne=(optionToRemove)=>{
     return(
       <div>
         <Header subtitle={subtitle}/>
-        <Action hasoption={this.state.options.length>0} handlePick={this.handlePick}/>
+        <div className="container">
+         <Action hasoption={this.state.options.length>0} handlePick={this.handlePick}/>
+        <div className="widget">
         <Options option={this.state.options} handleRemoveAll={this.handleRemoveAll} handleRemoveOne={this.handleRemoveOne}/>
         <AddOption option={this.state.options} handleAdd={this.handleAdd}/>
+      </div>
+      </div>
         <OptionModal selectedOption={this.state.selectedOption} handleclose={this.handleclose}/>
       </div>
     );
